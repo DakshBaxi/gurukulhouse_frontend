@@ -98,7 +98,7 @@ const featuredHostels = [
     location: "Kota",
     price: "₹8,000",
     rating: 4.8,
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/images/room.jpg",
     features: ["AC Rooms", "Study Hall", "Meditation"],
     popular: true,
   },
@@ -108,7 +108,7 @@ const featuredHostels = [
     location: "Delhi",
     price: "₹10,000",
     rating: 4.9,
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/images/room.jpg",
     features: ["Library", "Gym", "WiFi"],
     popular: false,
   },
@@ -118,7 +118,7 @@ const featuredHostels = [
     location: "Pune",
     price: "₹7,500",
     rating: 4.7,
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/images/room.jpg",
     features: ["Study Pods", "Yoga Hall", "Veg Meals"],
     popular: false,
   },
@@ -309,7 +309,7 @@ export default function HomePage() {
                 className="absolute top-0 right-0 w-80 h-96 rounded-3xl overflow-hidden shadow-2xl transform rotate-6"
               >
                 <Image
-                  src="/placeholder.svg?height=400&width=320"
+                  src="/images/room.jpg"
                   alt="Students studying"
                   fill
                   className="object-cover"
@@ -323,7 +323,7 @@ export default function HomePage() {
                 className="absolute bottom-20 left-0 w-64 h-80 rounded-3xl overflow-hidden shadow-2xl transform -rotate-12"
               >
                 <Image
-                  src="/placeholder.svg?height=320&width=256"
+                  src="/images/room.jpg"
                   alt="Hostel environment"
                   fill
                   className="object-cover"
@@ -374,57 +374,11 @@ export default function HomePage() {
       </section>
 
       {/* Features Section - Diagonal Cut */}
-      <section   className="relative py-32 bg-white md:[clip-path:polygon(0_15%,100%_0%,100%_85%,0%_100%)]">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-4xl md:text-6xl font-bold text-[#4a3728] mb-6">
-              More Than Just a{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b35] to-[#e07a5f]">
-                Place to Stay
-              </span>
-            </h2>
-            <p className="text-xl text-[#4a3728]/70 max-w-2xl mx-auto">
-              We create an ecosystem where academic excellence meets personal growth
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group"
-              >
-                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 bg-white rounded-3xl h-full overflow-hidden">
-                  <CardContent className="p-8 text-center relative">
-                    <div
-                      className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <feature.icon className="w-10 h-10 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-[#4a3728] mb-4">{feature.title}</h3>
-                    <p className="text-[#4a3728]/70 leading-relaxed">{feature.description}</p>
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[#ff6b35]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="flex flex-col">
+     
 
       {/* Featured Hostels - Asymmetric Layout */}
-      <section className="relative py-32 bg-[#f7f3e9] overflow-hidden">
+      <section className="relative py-32 md:order-2 order-1 bg-[#f7f3e9] overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#ff6b35]/10 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -522,6 +476,55 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+       <section   className="relative py-32 md:order-1 order-2  bg-white md:[clip-path:polygon(0_15%,100%_0%,100%_85%,0%_100%)]">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl md:text-6xl font-bold text-[#4a3728] mb-6">
+              More Than Just a{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b35] to-[#e07a5f]">
+                Place to Stay
+              </span>
+            </h2>
+            <p className="text-xl text-[#4a3728]/70 max-w-2xl mx-auto">
+              We create an ecosystem where academic excellence meets personal growth
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.8 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group"
+              >
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 bg-white rounded-3xl h-full overflow-hidden">
+                  <CardContent className="p-8 text-center relative">
+                    <div
+                      className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <feature.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#4a3728] mb-4">{feature.title}</h3>
+                    <p className="text-[#4a3728]/70 leading-relaxed">{feature.description}</p>
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[#ff6b35]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      </div>
 
       {/* Why Choose Us Section - Replacing Testimonials */}
       <section className="relative py-32 bg-gradient-to-br from-[#4a3728] to-[#81b29a] overflow-hidden">

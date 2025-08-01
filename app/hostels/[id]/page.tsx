@@ -55,7 +55,7 @@ const hostelData = {
     rent: "₹10,000",
     rating: 4.8,
     reviews: 156,
-    coverImage: "/placeholder.svg?height=400&width=800",
+    coverImage: "/images/room.jpg",
     description:
       "Gurukul Heights stands as a beacon of academic excellence in the heart of Kota. Inspired by ancient gurukul traditions yet equipped with modern amenities, we create an environment where discipline meets dreams. Our students don't just prepare for exams; they prepare for life.",
     roomTypes: [
@@ -74,12 +74,12 @@ const hostelData = {
       { name: "Gym", icon: Dumbbell },
     ],
     gallery: [
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
+      "/images/room.jpg",
+      "/images/room.jpg",
+      "/images/room.jpg",
+      "/images/room.jpg",
+      "/images/room.jpg",
+      "/images/room.jpg",
     ],
     usps: [
       "Silent Hours (10 PM - 6 AM) for focused study",
